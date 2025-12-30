@@ -110,14 +110,14 @@ They provided the most complete and comparable view of user behavior while minim
 
 ## 📁 Files Included
 -  `README.md` – Project documentation
--  `Bellabeat_Analysis.xlsx` – Cleaned datasets & calculations
+-  Raw data & cleaned data with calculations and visualizations (see `/data`)
 -  Charts & dashboards (see `/images`)
 -  Presentation slides (PDF)
 
 ---
 
 ## 📬 Contact
-**Loucif Mohamed Nidal**  
+**Loucif Nidal**  
 Junior Data Analyst  
 
 -  Email: mednidalloucif@gmail.com  
