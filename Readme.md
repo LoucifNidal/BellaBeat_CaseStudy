@@ -1,181 +1,123 @@
-# Bellabeat Case Study – Smart Device Usage Analysis  
-**Junior Data Analyst | Marketing Analytics**
+# 📊 Bellabeat Smart Device Usage Analysis  
+*Junior Data Analyst Case Study*
 
-![Dashboard Preview](images/dashboard.png)
-
----
-
-## 📌 Project Overview
-Bellabeat is a high-tech company that manufactures health-focused smart products for women.  
-This case study analyzes **smart device fitness data** to uncover user behavior patterns and provide **data-driven marketing insights** that support business growth.
-
-The analysis focuses on **non-Bellabeat smart device usage** to identify trends that can be applied to Bellabeat’s ecosystem, particularly the **Bellabeat App** and **Leaf device**.
+## 📈 Dashboard Preview
+![Dashboard Overview](images/dashboard_overview.png)
 
 ---
 
-## 🎯 Business Objective
-**Primary Goal:**  
-Analyze smart device usage data to understand how consumers engage with fitness tracking features and translate insights into **actionable marketing recommendations**.
-
-**Key Questions:**
-- What trends exist in smart device usage?
-- How do users balance activity, sleep, and sedentary behavior?
-- How can these insights inform Bellabeat’s marketing strategy?
+## 📌 Business Objective
+Bellabeat aims to understand how consumers use smart fitness devices in order to identify opportunities to improve engagement and refine marketing strategies.  
+This analysis focuses on uncovering **activity, sleep, and usage behavior trends** from non-Bellabeat smart device data and applying those insights to **Bellabeat’s app and Leaf device**.
 
 ---
 
-## 👥 Stakeholders
-- **Urška Sršen** – Co-Founder & Chief Creative Officer  
-- **Sando Mur** – Co-Founder  
-- **Bellabeat Marketing Analytics Team**
+## 🔍 Key Insights
+*(High-level, business-focused insights)*
+
+### 1️⃣ Most users lead low-intensity lifestyles
+- Average daily behavior is dominated by **sedentary and light activity**
+- Moderate and high-intensity activity is rare  
+**Implication:** Bellabeat marketing should emphasize *small, achievable activity goals* rather than high-performance fitness.
+
+### 2️⃣ Sleep efficiency varies despite similar time in bed
+- Most users spend **more time in bed than actually sleeping**
+- Small gaps indicate good sleep hygiene for many users, while others show inefficiencies  
+**Implication:** Bellabeat can promote sleep-quality insights and bedtime consistency features inside the app.
+
+> 📌 *Additional insights from charts are detailed in the Analysis section below.*
 
 ---
 
-## 🧠 Product Focus
-- **Bellabeat App** (Primary platform for user engagement)
-- **Leaf Device** (Data input source feeding the app)
+## 🛠 Technical Summary
 
----
-
-## 📂 Data Source
-**FitBit Fitness Tracker Data** (Kaggle – CC0 Public Domain)
-
-- Data collected from Fitbit users who consented to share activity and sleep data
-- Dataset includes **18 CSV files** at different time granularities
-- Data timeframe: **2016**
-
----
-
-## ⚠️ Data Limitations (ROCCC Assessment)
-- **Reliable:** Real user-generated device data
-- **Original:** Device-level data shared publicly
-- **Comprehensive:** Limited (small sample size, no demographics)
-- **Current:** Not current (2016 data)
-- **Cited:** Openly licensed (CC0)
-
-👉 Insights are **directional**, not conclusive.
+| Aspect | Details |
+|------|--------|
+| Tools Used | Google Sheets, Microsoft Excel |
+| Data Source | Fitbit Fitness Tracker Data (Kaggle – CC0) |
+| Datasets Used | dailyActivity_merged, dailySteps_merged, sleepDay_merged |
+| Techniques | Data cleaning, aggregation, conditional logic |
+| Visuals | Bar charts, summary tables, KPI-style metrics |
+| Purpose | Identify behavioral trends to guide Bellabeat marketing strategy |
 
 ---
 
 ## 🧹 Data Preparation & Cleaning
-To reduce complexity and ensure consistency, only **daily-level datasets** were used:
+To ensure consistency and relevance, only **daily-level datasets** were selected from the original 18 CSV files.
 
-**Selected Datasets**
-- `dailyActivity_merged.csv`
-- `dailySteps_merged.csv`
-- `sleepDay_merged.csv`
+**Key actions taken:**
+- Removed duplicate user-date records
+- Standardized numeric precision across activity distance columns
+- Converted sleep minutes into hours for interpretability
+- Removed redundant time components from sleep date fields
+- Retained only columns relevant to steps, sleep, and activity behavior
 
-**Key Issues Identified**
-- Duplicate user IDs across dates
-- Inconsistent date formats
-- Redundant time values (12:00 AM)
-- Mixed time granularities
-- Unnecessary columns
-
-**Cleaning Actions**
-- Removed duplicate daily records
-- Standardized date formats
-- Aligned datasets by date range
-- Retained only analysis-relevant columns
-- Verified absence of NULL values
+**Why only 3 datasets?**  
+They provided the most complete and comparable view of user behavior while minimizing inconsistencies caused by mismatched time granularities.
 
 ---
 
-## 🛠 Tools & Techniques
-**Tool Used:**  
-- **Google Sheets** (cleaning, analysis, visualization)
+## 🔧 Functions & Techniques Used
+*(Mentioned lightly, as requested)*
 
-### Functions & Methods Used (Light Technical Overview)
-- `UNIQUE()` – identify distinct user IDs
-- `AVERAGE()` / `AVERAGEIF()` – calculate user-level metrics
-- `COUNTIF()` – activity category distribution
-- `IF()` – classify activity levels
-- Conditional formatting – highlight patterns
-- Unit conversion (minutes → hours)
-- Sorting & filtering – integrity checks
-- Pivot-style summaries – activity & sleep aggregation
+- `UNIQUE()` → identify distinct user IDs
+- `AVERAGEIF()` → calculate average daily steps and activity metrics
+- `COUNTIF()` → support activity level categorization
+- Conditional formatting → highlight activity thresholds
+- Unit conversion (minutes → hours) → improve sleep analysis clarity
+- Basic arithmetic operations → gap calculation (time in bed vs sleep)
 
 ---
 
-## 📊 Analysis & Key Insights
+## 📊 Analysis Breakdown
 
-### 1️⃣ Steps Analysis
-Users were categorized by average daily steps:
+### 🏃 Activity & Steps Analysis
+![Steps Analysis](images/steps_analysis.png)
 
-| Activity Level | Daily Steps |
-|----------------|------------|
-| Low | < 5,000 |
-| Moderate | 5,000 – 8,000 |
-| High | > 8,000 |
-
-**Insights**
-- Most users fall into **Moderate** and **High** activity levels
-- A notable segment remains **Low activity**, presenting engagement opportunities
-- Step tracking is a strong behavioral anchor for users
+- Users were grouped into **Low (<5,000)**, **Moderate (5,000–8,000)**, and **High (>8,000)** activity levels
+- Most users fall into the **moderate category**, with fewer highly active users
 
 ---
 
-### 2️⃣ Sleep Analysis
-Metrics analyzed:
-- Average sleep duration
-- Time in bed
-- Sleep efficiency gap (time in bed – time asleep)
+### 😴 Sleep Behavior Analysis
+![Sleep Analysis](images/sleep_analysis.png)
 
-**Insights**
-- Users spend more time in bed than asleep
-- Small gaps suggest generally efficient sleep for most users
-- Larger gaps indicate potential sleep-quality issues
-- Opportunity for sleep-focused features and nudges
+- Average sleep duration is ~7 hours
+- Time in bed often exceeds actual sleep time
+- Sleep efficiency varies significantly between users
 
 ---
 
-### 3️⃣ Daily Activity Analysis
-Average daily minutes by activity type:
+### 🪑 Daily Activity Intensity
+![Activity Intensity](images/activity_intensity.png)
 
-| Activity Type | Avg Minutes/Day |
-|--------------|----------------|
-| Sedentary | ~1030 |
-| Lightly Active | ~220 |
-| Fairly Active | ~16 |
-| Very Active | ~20 |
-
-**Insights**
-- Sedentary behavior dominates daily routines
-- Light activity is common, but higher-intensity movement is rare
-- Indicates opportunity for **behavioral nudges** and micro-activity campaigns
+- Sedentary time dominates daily routines
+- Light activity is common
+- Fairly active and very active minutes are minimal
 
 ---
 
-## 📈 Key Takeaways
-- Users engage consistently with step and sleep tracking
-- Sedentary behavior outweighs active movement
-- Sleep efficiency varies across users
-- Smart nudges and personalized insights could drive deeper engagement
+## 🎯 Marketing Recommendations
+- Promote **light activity challenges** to match user behavior
+- Highlight **sleep insights and consistency tracking**
+- Use positive reinforcement rather than performance-driven messaging
+- Encourage gradual habit formation via app notifications
 
 ---
 
-## 💡 Marketing Recommendations
-- Promote **short activity challenges** to reduce sedentary time
-- Introduce **sleep efficiency insights** within the app
-- Use step-based milestones for habit-building campaigns
-- Segment users by activity level for personalized messaging
-
----
-
-## 📎 How to Use This Project
-1. Review the dashboard for a high-level overview
-2. Read insights by analysis section
-3. Apply findings to marketing or product strategy discussions
-4. Extend analysis with newer or demographic-enriched datasets
+## 📁 Files Included
+- 📄 `README.md` – Project documentation
+- 📊 `Bellabeat_Analysis.xlsx` – Cleaned datasets & calculations
+- 🖼 Charts & dashboards (see `/images`)
+- 🎤 Presentation slides (PDF)
 
 ---
 
 ## 📬 Contact
-- **Email:** mednidalloucif@gmail.com  
-- **GitHub:** https://github.com/LoucifNidal  
-- **Kaggle:** https://www.kaggle.com/nidalloucif  
-- **Portfolio:** https://loucifnidal.github.io  
+**Loucif Mohamed Nidal**  
+Junior Data Analyst  
 
----
+- 📧 Email: mednidalloucif@gmail.com  
+- 💻 GitHub: https://github.com/LoucifNidal  
+- 📊 Kaggle: https://www.kaggle.com/nidalloucif  
 
-© Loucif Mohamed Nidal — All Rights Reserved
