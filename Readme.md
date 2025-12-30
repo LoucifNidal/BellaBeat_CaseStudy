@@ -2,7 +2,7 @@
 *Junior Data Analyst Case Study*
 
 ## 📈 Dashboard Preview
-![Dashboard Overview](images/dashboard_overview.png)
+![Dashboard Overview](images/dashboard.png)
 
 ---
 
