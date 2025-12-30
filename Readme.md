@@ -1,35 +1,37 @@
-# 📊 Bellabeat Smart Device Usage Analysis  
+# Bellabeat Smart Device Usage Analysis  
 *Junior Data Analyst Case Study*
 
-## 📈 Dashboard Preview
+## Dashboard Preview
 ![Dashboard Overview](images/dashboard.png)
 
 ---
 
-## 📌 Business Objective
+##  Business Objective
 Bellabeat aims to understand how consumers use smart fitness devices in order to identify opportunities to improve engagement and refine marketing strategies.  
 This analysis focuses on uncovering **activity, sleep, and usage behavior trends** from non-Bellabeat smart device data and applying those insights to **Bellabeat’s app and Leaf device**.
 
 ---
 
-## 🔍 Key Insights
+##  Key Insights
 *(High-level, business-focused insights)*
 
-### 1️⃣ Most users lead low-intensity lifestyles
+### 1 Most users lead low-intensity lifestyles
 - Average daily behavior is dominated by **sedentary and light activity**
 - Moderate and high-intensity activity is rare  
 **Implication:** Bellabeat marketing should emphasize *small, achievable activity goals* rather than high-performance fitness.
 
-### 2️⃣ Sleep efficiency varies despite similar time in bed
+### 2 Sleep efficiency varies despite similar time in bed
 - Most users spend **more time in bed than actually sleeping**
 - Small gaps indicate good sleep hygiene for many users, while others show inefficiencies  
 **Implication:** Bellabeat can promote sleep-quality insights and bedtime consistency features inside the app.
 
-> 📌 *Additional insights from charts are detailed in the Analysis section below.*
+  ![Key Insights](images/insights.png)
+
+>  *Additional insights from charts are detailed in the Analysis section below.*
 
 ---
 
-## 🛠 Technical Summary
+## Technical Summary
 
 | Aspect | Details |
 |------|--------|
@@ -42,7 +44,7 @@ This analysis focuses on uncovering **activity, sleep, and usage behavior trends
 
 ---
 
-## 🧹 Data Preparation & Cleaning
+##  Data Preparation & Cleaning
 To ensure consistency and relevance, only **daily-level datasets** were selected from the original 18 CSV files.
 
 **Key actions taken:**
@@ -57,7 +59,7 @@ They provided the most complete and comparable view of user behavior while minim
 
 ---
 
-## 🔧 Functions & Techniques Used
+##  Functions & Techniques Used
 *(Mentioned lightly, as requested)*
 
 - `UNIQUE()` → identify distinct user IDs
@@ -69,9 +71,9 @@ They provided the most complete and comparable view of user behavior while minim
 
 ---
 
-## 📊 Analysis Breakdown
+##  Analysis Breakdown
 
-### 🏃 Activity & Steps Analysis
+###  Activity & Steps Analysis
 ![Steps Analysis](images/steps_analysis.png)
 
 - Users were grouped into **Low (<5,000)**, **Moderate (5,000–8,000)**, and **High (>8,000)** activity levels
@@ -79,7 +81,7 @@ They provided the most complete and comparable view of user behavior while minim
 
 ---
 
-### 😴 Sleep Behavior Analysis
+### Sleep Behavior Analysis
 ![Sleep Analysis](images/sleep_analysis.png)
 
 - Average sleep duration is ~7 hours
@@ -88,7 +90,7 @@ They provided the most complete and comparable view of user behavior while minim
 
 ---
 
-### 🪑 Daily Activity Intensity
+###  Daily Activity Intensity
 ![Activity Intensity](images/activity_intensity.png)
 
 - Sedentary time dominates daily routines
@@ -97,19 +99,20 @@ They provided the most complete and comparable view of user behavior while minim
 
 ---
 
-## 🎯 Marketing Recommendations
+## Marketing Recommendations
 - Promote **light activity challenges** to match user behavior
 - Highlight **sleep insights and consistency tracking**
 - Use positive reinforcement rather than performance-driven messaging
 - Encourage gradual habit formation via app notifications
+![ Marketing Recommendations](images/recommendations.png)
 
 ---
 
 ## 📁 Files Included
-- 📄 `README.md` – Project documentation
-- 📊 `Bellabeat_Analysis.xlsx` – Cleaned datasets & calculations
-- 🖼 Charts & dashboards (see `/images`)
-- 🎤 Presentation slides (PDF)
+-  `README.md` – Project documentation
+-  `Bellabeat_Analysis.xlsx` – Cleaned datasets & calculations
+-  Charts & dashboards (see `/images`)
+-  Presentation slides (PDF)
 
 ---
 
@@ -117,7 +120,7 @@ They provided the most complete and comparable view of user behavior while minim
 **Loucif Mohamed Nidal**  
 Junior Data Analyst  
 
-- 📧 Email: mednidalloucif@gmail.com  
-- 💻 GitHub: https://github.com/LoucifNidal  
-- 📊 Kaggle: https://www.kaggle.com/nidalloucif  
+-  Email: mednidalloucif@gmail.com  
+-  GitHub: https://github.com/LoucifNidal  
+-  Kaggle: https://www.kaggle.com/nidalloucif  
 
